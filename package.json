@@ -1,0 +1,29 @@
+{
+  "name": "mernstack_dashboard_app",
+  "version": "1.0.0",
+  "description": "dashboard component for CBC Portal Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwooz/MERNstack_dashboard.git"
+  },
+  "author": "wooz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cwooz/MERNstack_dashboard/issues"
+  },
+  "homepage": "https://github.com/cwooz/MERNstack_dashboard#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.15",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.11.0"
+  }
+}
