@@ -24,10 +24,16 @@ router.get('/test', (req, res) => res.json({ msg: 'Users Works' }));
 // @Desc      Register user
 // @Access    Public
 router.post('/register', (req, res) => {
-  const { error, isValid } = validateRegisterInput(req.body);
+  const { errors, isValid } = validateRegisterInput(req.body);
+
+  // Check Validation
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
 
 	User.findOne({ email: req.body.email }).then(user => {
 		if (user) {
+      // 
 			return res.status(400).json({ email: 'Email Already Exists' });
 		} else {
 			const avatar = gravatar.url(req.body.email, {
