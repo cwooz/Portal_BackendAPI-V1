@@ -12,12 +12,33 @@ const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
 
-// Routes --------------------------------------------------------->
+// Routes - Start ----------------------------------------------->
 
 // @route     GET api/profile/test
 // @desc      Tests post route
 // @access    Public
 router.get('/test', (req, res) => res.json({ msg: 'Profile Works' }));
+
+
+// @route     GET api/profile/handle/:handle ------------------------->
+// @desc      Backend API Route - to Get Profile by :Handle
+// @access    Public
+router.get('/handle/:handle',	(req, res) => {
+		const errors = {};
+
+    // req.params - matches to - :handle
+    Profile.findOne({ handle: req.params.id })
+      .populate('user', ['name', 'avatar'])
+			.then(profile => {
+				if (!profile) {
+					errors.noprofile = 'There is no profile for this user';
+					return res.status(404).json(errors);
+				}
+				res.json(profile);
+			})
+			.catch(err => res.status(404).json(err));
+	}
+);
 
 
 // @route     GET api/profile ----------------------------------->

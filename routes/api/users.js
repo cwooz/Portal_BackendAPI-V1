@@ -14,7 +14,8 @@ const validateLoginInput = require('../../validation/login');
 const user = require('../../models/User');
 
 
-// Routes ---------------------------------------->
+
+// Routes - Start ----------------------------------------------->
 
 // @Route     GET api/users/test ---------------------------->
 // @Desc      Tests post route
