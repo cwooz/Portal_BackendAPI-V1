@@ -12,13 +12,15 @@ const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
 
+// Routes --------------------------------------------------------->
+
 // @route     GET api/profile/test
 // @desc      Tests post route
 // @access    Public
 router.get('/test', (req, res) => res.json({ msg: 'Profile Works' }));
 
 
-// @route     GET api/profile
+// @route     GET api/profile ----------------------------------->
 // @desc      Get current users profile
 // @access    Private
 router.get(
@@ -41,7 +43,7 @@ router.get(
 );
 
 
-// @route     POST api/profile
+// @route     POST api/profile ------------------------------>
 // @desc      Create or Edit user profile
 // @access    Private
 router.post(

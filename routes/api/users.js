@@ -14,9 +14,9 @@ const validateLoginInput = require('../../validation/login');
 const user = require('../../models/User');
 
 
-// Routes ------------------------------>
+// Routes ---------------------------------------->
 
-// @Route     GET api/users/test
+// @Route     GET api/users/test ---------------------------->
 // @Desc      Tests post route
 // @Access    Public
 router.get('/test', (req, res) => res.json({ msg: 'Users Works' }));
@@ -65,7 +65,7 @@ router.post('/register', (req, res) => {
 });
 
 
-// @Route     GET api/users/login
+// @Route     GET api/users/login ----------------------->
 // @Desc      Login User / Returning JWT Token
 // @Access    Public
 router.post('/login', (req, res) => {
@@ -114,7 +114,7 @@ router.post('/login', (req, res) => {
 });
 
 
-// @Route     GET api/users/current
+// @Route     GET api/users/current -------------------->
 // @Desc      Return current user
 // @Access    Private
 router.get('/current', passport.authenticate('jwt', { session: false }),
@@ -129,7 +129,7 @@ router.get('/current', passport.authenticate('jwt', { session: false }),
 	}
 );
 
-// ------------------------------>
+// --------------------------------------------------------->
 
 
 module.exports = router;
