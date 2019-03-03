@@ -10,4 +10,4 @@ CBC Document Portal, powered by [javascript, node, express, mongodb, react, redu
 import { React,	Redux, JWT, MaterialUI,	Node,	Express, MongoDB } from 'dependencies';
 ```
 
-<img alt='Screen Shot' src="https://farm8.staticflickr.com/7924/32122498787_47439ce1bd_o.png" width="890">
+<img alt='Screen Shot' src="https://farm8.staticflickr.com/7905/33396243748_5b15898a73_o.png" width="890">
